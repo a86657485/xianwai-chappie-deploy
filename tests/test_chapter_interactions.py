@@ -117,6 +117,12 @@ class ChapterInteractionTests(unittest.TestCase):
         self.assertNotIn("showToast('抵达的是共同愿景", self.html)
         self.assertNotIn("showToast('抵达共同愿景", self.html)
 
+    def test_overview_removes_the_red_circled_intro_controls(self):
+        self.assertNotIn("GROW WITH INTELLIGENCE", self.html)
+        self.assertNotIn('id="begin"', self.html)
+        self.assertNotIn('class="hero-index"', self.html)
+        self.assertIn("margin:0 0 32px", self.html)
+
 
 if __name__ == "__main__":
     unittest.main()
