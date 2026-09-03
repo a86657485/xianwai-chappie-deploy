@@ -95,6 +95,19 @@ class ChapterInteractionTests(unittest.TestCase):
         if visibility_rule not in self.html:
             self.fail("the textbook props are not restricted to the 方子 chapter")
 
+    def test_shared_media_uses_the_local_server_api(self):
+        self.assertIn("async function loadServerMedia()", self.html)
+        self.assertIn("fetch('/api/media',{cache:'no-store'})", self.html)
+        self.assertIn("fetch(`/api/media/${id}`", self.html)
+        self.assertIn("method:'DELETE'", self.html)
+
+    def test_latest_brand_road_and_paths_edits_are_present(self):
+        self.assertIn('class="brand-emblem" src="assets/school-emblem.png"', self.html)
+        self.assertNotIn('<span class="brand-icon">X</span>', self.html)
+        self.assertIn("background:transparent;border:0;color:transparent", self.html)
+        self.assertIn("[x,.015,2.15]", self.html)
+        self.assertNotIn("真实项目融合", self.html)
+
 
 if __name__ == "__main__":
     unittest.main()
