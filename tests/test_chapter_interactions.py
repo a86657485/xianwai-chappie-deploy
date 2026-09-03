@@ -108,6 +108,10 @@ class ChapterInteractionTests(unittest.TestCase):
         self.assertIn("[x,.015,.55]", self.html)
         self.assertNotIn("真实项目融合", self.html)
 
+    def test_core_hides_serial_badge_and_uses_larger_ai_label(self):
+        self.assertIn("serialBadge.visible=selected!=='core';", self.html)
+        self.assertIn("textPlane(core,['AI'],.18,.14", self.html)
+
 
 if __name__ == "__main__":
     unittest.main()

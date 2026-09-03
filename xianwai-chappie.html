@@ -61076,7 +61076,7 @@ async function buildRobot(){
     box(core,.018,.047,.012,gold,[-.105+i*.03,s*.159,.024],undefined,'core',.004);
     box(core,.047,.018,.012,gold,[s*.159,-.105+i*.03,.024],undefined,'core',.004);
   }
-  textPlane(core,['AI'],.125,.1,[0,0,.047],'#09212b','#bde9e7');
+  textPlane(core,['AI'],.18,.14,[0,0,.047],'#09212b','#bde9e7');
   core.userData.leds=[];for(const [x,y]of[[-.09,.075],[.09,.075],[-.09,-.075],[.09,-.075]])core.userData.leds.push(sphere(core,.009,glow,[x,y,.048]));
   serialBadge=group(robot);const serialPlateMaterial=new THREE.MeshPhysicalMaterial({color:0x183b4a,metalness:.78,roughness:.2,clearcoat:.9,clearcoatRoughness:.08});box(serialBadge,.265,.16,.028,serialPlateMaterial,[0,0,0],undefined,undefined,.012);textPlane(serialBadge,['26'],.22,.115,[0,0,.017],'#173747','#d7ebee');
   brain=group(robot);brain.visible=false;brain.userData.visualStyle='neural-orbit';const nodes=[];
@@ -61200,7 +61200,7 @@ function updateAttachments(selected,now){
   if(seed.userData.crystal)seed.userData.crystal.material.emissiveIntensity=.09+(reduced?0:(Math.sin(now*3.4)+1)*.11);
   if(seed.userData.aura)seed.userData.aura.opacity=.045+(reduced?0:(Math.sin(now*2.7)+1)*.026);
   seed.userData.sparkles?.forEach((sparkle,i)=>{sparkle.visible=selected==='seed';sparkle.position.y=((now*.055+i*.038)%.22)-.11;sparkle.material.opacity=.45+(reduced?0:(Math.sin(now*4+i)+1)*.25);});
-  serialBadge.position.copy(cp).add(new THREE.Vector3(0,0,.18));serialBadge.rotation.copy(bones.Spine2.rotation);
+  serialBadge.position.copy(cp).add(new THREE.Vector3(0,0,.18));serialBadge.rotation.copy(bones.Spine2.rotation);serialBadge.visible=selected!=='core';
   for(const prop of books){
     prop.object.visible=selected==='books';
     const palm=boneLocal(prop.name+'Middle2');
