@@ -105,7 +105,7 @@ class ChapterInteractionTests(unittest.TestCase):
         self.assertIn('class="brand-emblem" src="assets/school-emblem.png"', self.html)
         self.assertNotIn('<span class="brand-icon">X</span>', self.html)
         self.assertIn("background:transparent;border:0;color:transparent", self.html)
-        self.assertIn("[x,.015,2.15]", self.html)
+        self.assertIn("[x,.015,.82]", self.html)
         self.assertNotIn("真实项目融合", self.html)
 
 
