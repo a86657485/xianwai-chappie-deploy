@@ -112,6 +112,11 @@ class ChapterInteractionTests(unittest.TestCase):
         self.assertIn("serialBadge.visible=selected!=='core';", self.html)
         self.assertIn("textPlane(core,['AI'],.18,.14", self.html)
 
+    def test_brand_uses_full_school_name_and_arrival_subtitle_is_removed(self):
+        self.assertIn('<span>贤义外国语学校<span class="brand-sub">', self.html)
+        self.assertNotIn("showToast('抵达的是共同愿景", self.html)
+        self.assertNotIn("showToast('抵达共同愿景", self.html)
+
 
 if __name__ == "__main__":
     unittest.main()
