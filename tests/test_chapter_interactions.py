@@ -70,6 +70,25 @@ class ChapterInteractionTests(unittest.TestCase):
         self.assertIn("const medalGoldMaterial=new THREE.MeshPhysicalMaterial", self.html)
         self.assertNotIn("QUALITY · TOGETHER", self.html)
 
+    def test_latest_visual_and_layout_requests_are_wired(self):
+        expected_mapping = (
+            "const chapterMotions={face:'Waving',core:'Talking (2)',"
+            "paths:'Pointing Forward',books:'Idle',"
+            "limbs:'Kneeling Pointing',ideas:'Talking (1)',"
+            "medal:'Salute',seed:'Using A Fax Machine'};"
+        )
+        self.assertIn(expected_mapping, self.html)
+        self.assertIn("books:2.75", self.html)
+        self.assertIn("serialBadge", self.html)
+        self.assertIn("['26']", self.html)
+        self.assertIn("core.userData.visualStyle='machined-ai-chip'", self.html)
+        self.assertIn("nav#chapters{display:flex;align-items:center;justify-content:flex-start;", self.html)
+        self.assertIn("right:230px;bottom:0", self.html)
+        self.assertIn(".footer-note{position:absolute;right:0;bottom:0", self.html)
+        self.assertIn("id=\"site-links\"", self.html)
+        self.assertIn("function openOfficialSite(label,url)", self.html)
+        self.assertIn("https://www.moe.gov.cn/srcsite/A16/s3342/202604/t20260410_1433240.html", self.html)
+
     def test_textbook_props_are_visible_only_in_the_books_chapter(self):
         visibility_rule = "prop.object.visible=selected==='books';"
         if visibility_rule not in self.html:
