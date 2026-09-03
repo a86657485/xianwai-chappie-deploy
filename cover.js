@@ -2,6 +2,7 @@
 (()=>{'use strict';
   const root=document.documentElement,canvas=document.getElementById('intro-canvas');
   const enter=document.getElementById('enter-report'),status=document.getElementById('intro-status');
+  const fullscreen=document.getElementById('cover-fullscreen');
   const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
   const smooth=(x)=>{x=Math.max(0,Math.min(1,x));return x*x*(3-2*x);};
   const timeline=t=>({reveal:smooth((t-.8)/2.5),scan:smooth((t-2.1)/4.8),ready:t>=7.8});
@@ -117,6 +118,13 @@
     event.preventDefault();root.dataset.intro='leaving';
     setTimeout(()=>{dispose();location.assign(enter.href);},reduced?0:380);
   });
+  fullscreen?.addEventListener('click',async()=>{
+    try{
+      if(document.fullscreenElement)await document.exitFullscreen();
+      else if(document.documentElement.requestFullscreen)await document.documentElement.requestFullscreen();
+    }catch{status.textContent='当前浏览器不支持全屏，请使用浏览器菜单全屏。';status.hidden=false;}
+  });
+  document.addEventListener('fullscreenchange',()=>{if(fullscreen)fullscreen.textContent=document.fullscreenElement?'×':'⛶';});
   addEventListener('resize',resize);
   addEventListener('pagehide',dispose);
   addEventListener('pageshow',event=>{if(event.persisted)location.reload();});
