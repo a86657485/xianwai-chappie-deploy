@@ -1,0 +1,22 @@
+{
+  "source": "https://github.com/Jorge-Cuevas90003/Jorge-Cuevas90003.github.io/blob/main/models/chappie/chappie_anim.glb",
+  "original_sha256": "cf6783712f205c0d26b7491b7fb1429498f72eeb0909e0c915e373de2bdf0582",
+  "runtime_sha256": "0b3d8a3a055cf2882a93811548a772d22855327c5d3d346c13aad563cb671f74",
+  "changes": "Draco decompressed for offline loading; original textures, nodes, skins, animations and material definitions preserved.",
+  "animations": [
+    "Arm Stretching",
+    "Golf Pre-Putt",
+    "Hip Hop Dancing (1)",
+    "Hip Hop Dancing",
+    "Idle",
+    "Kneeling Pointing",
+    "Pointing Forward",
+    "Salute",
+    "Standing Clap",
+    "Talking (1)",
+    "Talking (2)",
+    "Talking",
+    "Using A Fax Machine",
+    "Waving"
+  ]
+}
