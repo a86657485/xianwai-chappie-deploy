@@ -82,6 +82,7 @@ class ChapterInteractionTests(unittest.TestCase):
         self.assertIn("serialBadge", self.html)
         self.assertIn("['26']", self.html)
         self.assertIn("core.userData.visualStyle='machined-ai-chip'", self.html)
+        self.assertIn("if(bones.RightToeBase)bones.RightToeBase.scale.setScalar(.78);", self.html)
         self.assertIn("nav#chapters{display:flex;align-items:center;justify-content:flex-start;", self.html)
         self.assertIn("right:230px;bottom:0", self.html)
         self.assertIn(".footer-note{position:absolute;right:0;bottom:0", self.html)

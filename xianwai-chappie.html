@@ -61155,6 +61155,7 @@ function updatePose(dt,now,selected){
   if(libraryAction||motionReturn>0)mixer.update(motionDt);
   else if(!reduced&&selected===null)mixer.update(motionDt*.65);
   else mixer.update(0);
+  if(bones.RightToeBase)bones.RightToeBase.scale.setScalar(.78);
   if(!libraryAction&&motionReturn<=0){
     for(const n of ['LeftUpLeg','RightUpLeg','LeftLeg','RightLeg','LeftFoot','RightFoot'])bones[n].quaternion.copy(baseBoneQuats[n]);
     const phase=state.phase,stride=.12*walkBlend,axis=new THREE.Vector3(1,0,0);
