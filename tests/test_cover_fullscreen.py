@@ -12,6 +12,8 @@ class CoverFullscreenTests(unittest.TestCase):
         js = (ROOT / "cover.js").read_text(encoding="utf-8")
         self.assertIn('id="cover-fullscreen"', html)
         self.assertIn("#cover-fullscreen{position:fixed;right:", css)
+        self.assertIn("color:#fff", css)
+        self.assertIn("border:1px solid #fff", css)
         self.assertIn("requestFullscreen", js)
         self.assertIn("cover-fullscreen", js)
 
