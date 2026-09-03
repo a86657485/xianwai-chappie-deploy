@@ -79,8 +79,8 @@ class ChapterInteractionTests(unittest.TestCase):
         )
         self.assertIn(expected_mapping, self.html)
         self.assertIn("books:2.75", self.html)
-        self.assertIn("serialBadge", self.html)
-        self.assertIn("['26']", self.html)
+        self.assertNotIn("serialBadge", self.html)
+        self.assertNotIn("['26']", self.html)
         self.assertIn("core.userData.visualStyle='machined-ai-chip'", self.html)
         self.assertIn("if(bones.RightToeBase)bones.RightToeBase.scale.setScalar(.78);", self.html)
         self.assertIn("nav#chapters{display:flex;align-items:center;justify-content:flex-start;", self.html)
@@ -108,9 +108,9 @@ class ChapterInteractionTests(unittest.TestCase):
         self.assertIn("[x,.015,.55]", self.html)
         self.assertNotIn("真实项目融合", self.html)
 
-    def test_core_hides_serial_badge_and_uses_larger_ai_label(self):
-        self.assertIn("serialBadge.visible=selected!=='core';", self.html)
+    def test_core_uses_larger_ai_label_and_seed_hides_medal(self):
         self.assertIn("textPlane(core,['AI'],.18,.14", self.html)
+        self.assertIn("medal.visible=(end&&selected!=='seed')||selected==='medal';", self.html)
 
     def test_brand_uses_full_school_name_and_arrival_subtitle_is_removed(self):
         self.assertIn('<span>贤义外国语学校<span class="brand-sub">', self.html)
