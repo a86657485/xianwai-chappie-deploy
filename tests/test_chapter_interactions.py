@@ -54,6 +54,11 @@ class ChapterInteractionTests(unittest.TestCase):
         self.assertIn('id="modal-upload"', self.html)
         self.assertIn("for(const text of [c.summary,c.evidence])", self.html)
 
+    def test_textbook_props_are_visible_only_in_the_books_chapter(self):
+        visibility_rule = "prop.object.visible=selected==='books';"
+        if visibility_rule not in self.html:
+            self.fail("the textbook props are not restricted to the 方子 chapter")
+
 
 if __name__ == "__main__":
     unittest.main()

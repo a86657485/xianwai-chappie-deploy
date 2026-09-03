@@ -61173,6 +61173,7 @@ function updateAttachments(selected,now){
   brain.position.copy(hp).add(new THREE.Vector3(0,.24,.015));brain.visible=selected==='ideas';brain.rotation.y=reduced?0:now*.16;
   seed.position.copy(cp).add(new THREE.Vector3(-.15,-.14,.22));
   for(const prop of books){
+    prop.object.visible=selected==='books';
     const palm=boneLocal(prop.name+'Middle2');
     prop.object.position.copy(palm).add(new THREE.Vector3(prop.side*.02,-.04,.028));
     const q=bones[prop.name].getWorldQuaternion(new THREE.Quaternion());
