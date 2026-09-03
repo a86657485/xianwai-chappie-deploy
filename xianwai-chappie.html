@@ -27,7 +27,7 @@ h1 span{display:block;color:#a2cacf}
 .hero-note{font-size:clamp(12px,.82vw,16px);letter-spacing:1px;color:#8fa7b5;margin-top:20px}
 .hero-index{margin-top:36px;display:flex;gap:24px;font-size:clamp(11px,.8vw,16px);color:#78919f}
 /* The card floats above one continuous scene; no column split or scrolling. */
-#panel{position:absolute;left:5%;top:47%;width:min(38vw,650px);z-index:5;transform:translateY(-50%);padding:clamp(20px,2.4vh,30px) clamp(24px,2vw,38px);border:1px solid #b4d5e21f;border-radius:12px;background:linear-gradient(125deg,#152630b3,#0b171f82);box-shadow:0 24px 80px #0003,inset 0 1px 0 #e1faff09;backdrop-filter:blur(18px);overflow:hidden}
+#panel{position:absolute;left:5%;top:47%;width:min(38vw,650px);z-index:5;transform:translateY(-50%);padding:clamp(20px,2.4vh,30px) clamp(24px,2vw,38px);border:1px solid #b4d5e238;border-radius:12px;background:linear-gradient(125deg,#1526307a,#0b171f4d);box-shadow:0 24px 80px #0003,inset 0 1px 0 #e1faff18;backdrop-filter:blur(24px) saturate(1.12);overflow:hidden}
 .panel-top{display:flex;justify-content:space-between;align-items:center;font-size:clamp(12px,.85vw,17px);letter-spacing:2px;color:#9bbbc7;margin-bottom:14px}
 .panel-top button{font-size:29px;color:#a9c4cf;line-height:1;width:30px;height:30px;padding:0}
 #panel .eyebrow{font-size:clamp(10px,.7vw,14px);letter-spacing:2px;color:#789daa}
@@ -40,8 +40,8 @@ h1 span{display:block;color:#a2cacf}
 .item h4{font-size:clamp(21px,min(1.5vw,2.6vh),30px);font-weight:500;margin:0 0 5px;color:#ecf7fc;line-height:1.3}
 .item p{font-size:clamp(18px,min(1.3vw,2.3vh),26px);color:#bed2df;line-height:1.5;margin:0;white-space:pre-line;overflow-wrap:anywhere}
 .panel-bottom{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-top:clamp(18px,2.3vh,28px);padding-top:16px;border-top:1px solid #abcbd11d}
-#show-media{padding:5px 0;text-align:left;font-size:clamp(13px,.9vw,18px);color:#a4c6d1;white-space:nowrap}
-#show-media:hover{color:#e1ffff}#media-count{font-variant-numeric:tabular-nums;color:#76939f}
+#show-media{position:relative;width:38px;height:38px;padding:0;display:grid;place-items:center;border:1px solid #9fc7ca3d;border-radius:9px;color:#a9d0d2;background:#b5dadd0d;transition:color .2s,border-color .2s,background .2s,transform .2s}
+#show-media:hover{color:#efffff;border-color:#a8ddda8c;background:#b5e5df1c;transform:translateY(-1px)}#show-media .album-icon{width:19px;height:19px;display:block;fill:none;stroke:currentColor;stroke-width:1.55;stroke-linecap:round;stroke-linejoin:round}#media-count{position:absolute;right:-7px;top:-7px;min-width:17px;height:17px;padding:0 4px;display:grid;place-items:center;border-radius:9px;background:#8fc8c3;color:#10292d;font-size:10px;font-weight:600;font-variant-numeric:tabular-nums;box-shadow:0 3px 12px #0004}#media-count:empty{display:none}
 .panel-nav{display:flex;align-items:center;gap:14px}.panel-nav button{font-size:22px;padding:3px 5px;color:#c3e2e3}.panel-nav span{font-size:11px;letter-spacing:2px;color:#6f98a6;white-space:nowrap}
 .scene-caption{position:absolute;right:5%;top:clamp(98px,11vh,135px);display:flex;align-items:center;gap:9px;color:#8eaab8;font-size:clamp(11px,.8vw,16px);letter-spacing:1px}
 .status-dot{width:5px;height:5px;background:#a2e5d5;border-radius:50%;box-shadow:0 0 13px #8ff5dc}
@@ -66,9 +66,9 @@ nav button strong{font-weight:400;font-size:clamp(15px,.96vw,19px);letter-spacin
 .footer-note{display:flex;gap:18px;align-items:center;margin-top:17px;color:#607b8b;font-size:10px;letter-spacing:.5px}
 .footer-note button{padding:0;font-size:10px;color:#819ca8}.key-hint{margin-left:auto}
 #toast{position:absolute;left:50%;bottom:100px;transform:translateX(-50%);background:#132630e8;border:1px solid #47677288;border-radius:5px;padding:12px 20px;z-index:40;font-size:clamp(14px,1.1vw,21px);line-height:1.5;max-width:80%;opacity:0;pointer-events:none;transition:opacity .25s}#toast.visible{opacity:1}
-dialog{background:#0b1722f5;border:1px solid #8db4c24d;color:#d1e0e7;width:min(1020px,88vw);height:min(790px,82dvh);max-height:82dvh;max-width:90vw;border-radius:12px;padding:28px;box-shadow:0 40px 100px #0009;overflow:hidden}
+dialog{background:linear-gradient(135deg,#0b1722bd,#1028348f);border:1px solid #a4cad05c;color:#d1e0e7;width:min(1020px,88vw);height:min(790px,82dvh);max-height:82dvh;max-width:90vw;border-radius:18px;padding:28px;box-shadow:0 40px 110px #0008,inset 0 1px 0 #efffff1f;backdrop-filter:blur(28px) saturate(1.18);overflow:hidden}
 dialog[open]{display:flex;flex-direction:column;gap:20px}dialog::backdrop{background:#02050bba;backdrop-filter:blur(10px)}
-.dialog-top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex:none}.dialog-top h2{font-weight:500;font-size:clamp(20px,1.8vw,34px);margin:0;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.dialog-top button{font-size:28px;color:#adced9}.dialog-top #modal-upload{font-size:clamp(12px,1vw,18px);white-space:nowrap;margin-left:auto;padding:8px 0}
+.dialog-top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex:none}.dialog-top h2{font-weight:500;font-size:clamp(20px,1.8vw,34px);margin:0;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.dialog-top button{font-size:28px;color:#adced9}.dialog-top #modal-upload{margin-left:auto}.dialog-top #modal-upload,.dialog-top #modal-delete{width:42px;height:42px;padding:0;display:grid;place-items:center;border:1px solid #a6cdd255;border-radius:50%;background:#a9d8da12;color:#d7f0ef;font-size:25px;font-weight:300;line-height:1;transition:background .2s,border-color .2s,transform .2s}.dialog-top #modal-upload:hover,.dialog-top #modal-delete:hover{background:#bce7e52b;border-color:#c8eeee9c;transform:translateY(-1px)}.dialog-top #modal-delete:disabled{opacity:.24;transform:none}dialog.media-mode .dialog-top{justify-content:flex-end}dialog.media-mode #modal-title,dialog.media-mode #modal-close{display:none}dialog.media-mode #modal-body{border:1px solid #a7cbd02b;border-radius:14px;background:radial-gradient(circle at 50% 40%,#afdad813,#06101712);box-shadow:inset 0 1px 26px #d6ffff08}
 #modal-body{min-height:0;flex:1;display:flex;flex-direction:column;justify-content:center;font-size:clamp(18px,1.4vw,27px);line-height:1.8;color:#bed4e1;overflow:hidden;overflow-wrap:anywhere}
 #modal-body p{margin:0 0 20px}#modal-body p:last-child{margin-bottom:0}#modal-body a{color:#b5ddd8}#modal-body img,#modal-body video{width:100%;height:100%;min-height:0;object-fit:contain}#modal-body .media-note{font-size:.75em;color:#7e9dab}
 #modal-pages{display:flex;align-items:center;justify-content:space-between;border-top:1px solid #9cbcc029;padding-top:16px;gap:15px;flex:none}#modal-pages button{font-size:clamp(14px,1vw,20px);color:#b8d8da;padding:6px 0}#modal-page-count{font-size:14px;color:#7f9fac;letter-spacing:2px}
@@ -85,7 +85,7 @@ dialog[open]{display:flex;flex-direction:column;gap:20px}dialog::backdrop{backgr
 @media(max-width:650px){
  header{left:6%;right:6%;top:20px}.brand{font-size:18px}.brand-icon{width:31px;height:31px;font-size:23px}.brand-sub{font-size:9px}.edition{display:none}.header-actions button{width:29px;height:29px;font-size:18px}
  #hero{left:7%;top:14%;width:86%;transform:none}h1{font-size:clamp(32px,7vw,45px);line-height:1.18;margin:16px 0}h1 span{display:inline;margin-left:8px}.eyebrow{font-size:9px;letter-spacing:2px}.hero-desc{font-size:18px;line-height:1.5}.hero-desc br{display:none}.primary{padding:10px 15px;margin-top:17px;font-size:14px;gap:22px}.primary span{font-size:20px}.hero-note{font-size:10px;margin-top:12px}.hero-index{display:none}
- #panel{left:5%;right:5%;width:auto;top:auto;bottom:104px;transform:none;padding:15px 19px;border-radius:10px;background:linear-gradient(130deg,#152632e6,#0c1a23c9)}
+ #panel{left:5%;right:5%;width:auto;top:auto;bottom:104px;transform:none;padding:15px 19px;border-radius:10px;background:linear-gradient(130deg,#152632a8,#0c1a237d)}
  .panel-top{font-size:10px;margin-bottom:4px}.panel-top button{font-size:23px;width:24px;height:24px}#panel .eyebrow{display:none}#panel h2{font-size:34px;margin:4px 0 8px;line-height:1.1}#panel h2 small{font-size:12px;margin-left:12px}#panel h3{font-size:18px;margin:7px 0 13px;line-height:1.3}
  #panel-items{gap:10px}.item{grid-template-columns:18px 1fr;gap:8px}.item-num{font-size:10px}.item h4{font-size:16px;line-height:1.25;margin-bottom:3px}.item p{font-size:14px;line-height:1.4}.panel-bottom{margin-top:13px;padding-top:9px}.panel-nav{gap:12px}.panel-nav button{font-size:20px}.panel-nav span{font-size:10px}#show-media{font-size:12px}
  .scene-caption{top:38%;right:7%;font-size:10px}.motion-control{top:calc(38% + 25px);right:7%;font-size:10px;gap:5px}.motion-control select{max-width:133px;padding:5px}.scene-tools{top:52%;right:5%;gap:5px}.scene-tools button{height:31px;min-width:31px;font-size:19px}.scene-tools button span{display:none}body.detail .scene-caption,body.detail .motion-control{display:none}body.detail .scene-tools{top:14%}
@@ -121,7 +121,7 @@ html[data-theme=light] .hero-desc{color:#293f43}
 html[data-theme=light] .hero-index{color:#698183}
 html[data-theme=light] .primary{background:#244b4f;color:#f5ffff;border-color:#244b4f}
 html[data-theme=light] .primary:hover{background:#386368}
-html[data-theme=light] #panel{background:linear-gradient(125deg,#ffffffb8,#f6faf69e);border-color:#72939135;box-shadow:0 22px 70px #42615b14,inset 0 1px 0 #fff9}
+html[data-theme=light] #panel{background:linear-gradient(125deg,#ffffff8c,#f6faf66b);border-color:#7293914f;box-shadow:0 22px 70px #42615b14,inset 0 1px 0 #ffffffe0}
 html[data-theme=light] .panel-top,html[data-theme=light] #panel h2 small{color:#5a777b}
 html[data-theme=light] .panel-top button{color:#45676d}
 html[data-theme=light] #panel .eyebrow{color:#6c888b}
@@ -147,15 +147,16 @@ html[data-theme=light] nav button:after{background:#497a73}
 html[data-theme=light] nav button:hover{background:#a0bcb111}
 html[data-theme=light] .footer-note,html[data-theme=light] .footer-note button{color:#79908f}
 html[data-theme=light] #toast{background:#f6fff9f2;color:#2b4a4e;border-color:#87aaa577}
-html[data-theme=light] dialog{background:#f5f9f6f7;border-color:#799a974d;color:#243f43;box-shadow:0 40px 100px #243f3b33}
+html[data-theme=light] dialog{background:linear-gradient(135deg,#f5f9f6c7,#e9f2ed9e);border-color:#799a9766;color:#243f43;box-shadow:0 40px 100px #243f3b2b,inset 0 1px 0 #fff}
 html[data-theme=light] dialog::backdrop{background:#b6c8c29c}
 html[data-theme=light] #modal-body{color:#3b5a61}
 html[data-theme=light] #modal-body a,html[data-theme=light] .dialog-top button,html[data-theme=light] #modal-pages button{color:#396c6e}
 html[data-theme=light] #modal-pages{border-color:#8daaa944}
+html[data-theme=light] dialog.media-mode #modal-body{background:radial-gradient(circle at 50% 40%,#ffffff66,#d8e7df24);border-color:#72958f4a}html[data-theme=light] .dialog-top #modal-upload,html[data-theme=light] .dialog-top #modal-delete{background:#ffffff42;border-color:#6f97945e;color:#315f61}
 html[data-theme=light] #loading{background:#edf1ef;color:#537775}
 html[data-theme=light] .loader-orbit{border-color:#c1d2cc;border-top-color:#547f7a}
 html[data-theme=light] #unavailable{color:#486568}
-@media(max-width:650px){.motion-control{top:38%}.header-actions #theme-toggle{font-size:11px;min-width:46px}html[data-theme=light] #panel{background:linear-gradient(125deg,#fffffff0,#f2f8f1e5)}}
+@media(max-width:650px){.motion-control{top:38%}.header-actions #theme-toggle{font-size:11px;min-width:46px}html[data-theme=light] #panel{background:linear-gradient(125deg,#ffffffb8,#f2f8f196)}}
 </style></head>
 <body><main id="app">
 <div id="stage"><canvas id="canvas" aria-label="可拖动旋转的三维机器人；用加减按钮或双指缩放，通过下方章节按钮进行探索。"></canvas><div id="markers"></div><div id="unavailable" hidden><h2>此浏览器未能启动 3D</h2><p>请使用开启硬件加速的 Chrome 或 Edge；下方章节仍可阅读。</p></div></div>
@@ -166,13 +167,13 @@ html[data-theme=light] #unavailable{color:#486568}
   <h2><span id="panel-word"></span><small id="panel-part"></small></h2>
   <h3 id="panel-title"></h3>
   <div id="panel-items"></div>
-  <div class="panel-bottom"><button id="show-media">作品与资料 <span id="media-count"></span> ↗</button><div class="panel-nav"><button id="previous" aria-label="上一部分">←</button><span id="chapter-count"></span><button id="next" aria-label="下一部分">→</button></div></div>
+  <div class="panel-bottom"><button id="show-media" aria-label="打开作品相册"><svg class="album-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="15" height="14" rx="2"></rect><path d="M5 14l4-4 3 3 2-2 6 6"></path><path d="M3 8v11a2 2 0 0 0 2 2h11"></path></svg><span id="media-count"></span></button><div class="panel-nav"><button id="previous" aria-label="上一部分">←</button><span id="chapter-count"></span><button id="next" aria-label="下一部分">→</button></div></div>
 </aside>
 <label class="motion-control" for="motion-select"><select id="motion-select" aria-label="选择自动轮播或单个动作" disabled><option value="auto">自动轮播</option></select></label>
 <div class="scene-tools"><button id="rotate" aria-label="自动环绕" aria-pressed="false">↻</button><button id="zoom-in" aria-label="放大">＋</button><button id="zoom-out" aria-label="缩小">−</button><button id="reset" aria-label="复位视角">⌂</button></div>
 <footer><div class="transport"><button id="play" aria-label="开始行走">▶</button><div class="timeline"><div class="timeline-label"><span id="progress-label">起点</span></div><input type="range" id="progress" min="0" max="100" step="0.1" value="0" aria-label="建设之旅进度"></div><button class="end-button" id="finish">抵达愿景 ↗</button></div><nav id="chapters" aria-label="汇报章节"></nav><div class="footer-note"><span>CHAPPIE · Beneth Borromeo / CC BY 4.0</span><button id="export">打包素材</button><button id="about">来源</button></div></footer>
 <input id="upload" type="file" accept="image/*,video/*" multiple hidden>
-<div id="toast" role="status"></div><dialog id="modal"><div class="dialog-top"><h2 id="modal-title"></h2><button id="modal-upload" hidden>＋ 添加图片 / 视频</button><button id="modal-close" aria-label="关闭弹窗">×</button></div><div id="modal-body"></div><div id="modal-pages" hidden><button id="modal-previous" aria-label="上一页">← 上一页</button><span id="modal-page-count"></span><button id="modal-next" aria-label="下一页">下一页 →</button></div></dialog>
+<div id="toast" role="status"></div><dialog id="modal"><div class="dialog-top"><h2 id="modal-title"></h2><button id="modal-upload" hidden aria-label="添加图片或视频">＋</button><button id="modal-delete" hidden aria-label="删除当前图片或视频">−</button><button id="modal-close" aria-label="关闭弹窗">×</button></div><div id="modal-body"></div><div id="modal-pages" hidden><button id="modal-previous" aria-label="上一页">← 上一页</button><span id="modal-page-count"></span><button id="modal-next" aria-label="下一页">下一页 →</button></div></dialog>
 <div id="loading"><span class="loader-orbit"></span><div>正在载入原版 Chappie 机器人…</div></div>
 </main><script>const CHAPTERS = [
 {id:'face',word:'面子',part:'脸部',stage:'做什么',en:'VISIBLE EXCELLENCE',title:"让优秀，被看见。",summary:"以课堂与社团，呈现科组品质。",items:[["优秀科组", "协同教研 · 质量提升 · 成果积累"], ["优智课堂", "AI赋能 · 少教多学 · 学以致用"], ["优质社团", "兴趣进阶 · 项目创作 · 展示交流"]],evidence:'可展示：科组荣誉、课堂实录、社团作品与科技节路演。',outcome:'让科组有辨识度，让课堂有获得感，让学生有展示台。'},
@@ -61004,7 +61005,7 @@ const state={selected:-1,progress:0,playing:false,rotate:false,finished:false,ph
 let scene,renderer,camera,robot,core,brain,medal,terminal,seed,sprout,anchors={},clickables=[],routeSegments=[],lamp,ready=false;
 let model,chappie,mixer,idleAction,walkBlend=0,libraryAction=null,motionReturn=0;const libraryActions=new Map();const bones={},baseBoneQuats={},footRest={},books=[],modelMaterials={};
 const autoMotions=['Waving','Talking (1)','Talking (2)','Talking','Arm Stretching'];
-const chapterMotions={face:'Waving',core:'Talking (2)',paths:'Pointing Forward',books:'Using A Fax Machine',limbs:'Arm Stretching',ideas:'Talking (1)',medal:'Standing Clap',seed:'Kneeling Pointing'};
+const chapterMotions={face:'Waving',core:'Talking (2)',paths:'Pointing Forward',books:'Idle',limbs:'Kneeling Pointing',ideas:'Talking (1)',medal:'Salute',seed:'Using A Fax Machine'};
 let autoPlayback=true,autoMotionIndex=0,autoMotionDelay=.5;
 let theme='light';try{const saved=localStorage.getItem('xianwai-presentation-theme');if(saved==='dark'||saved==='light')theme=saved;}catch{}
 const themeWorld={roads:[],edges:[],dashes:[],labels:[]};
@@ -61074,10 +61075,14 @@ async function buildRobot(){
     box(core,.047,.018,.012,gold,[s*.159,-.105+i*.03,.024],undefined,'core',.004);
   }
   textPlane(core,['AI'],.125,.1,[0,0,.045],'#75cbd0','#12313b');
-  brain=group(robot);brain.visible=false;const nodes=[];
-  for(let i=0;i<21;i++){const t=i*2.399,position=new THREE.Vector3(Math.cos(t)*.17,Math.sin(i*.73)*.1,Math.sin(t)*.12);nodes.push(position);sphere(brain,.014,glow,position.toArray());}
+  brain=group(robot);brain.visible=false;brain.userData.visualStyle='neural-orbit';const nodes=[];
+  const brainNodeMaterial=new THREE.MeshBasicMaterial({color:0xb8ffff,transparent:true,opacity:.92,blending:THREE.AdditiveBlending,depthWrite:false});
+  const brainCoreMaterial=new THREE.MeshPhysicalMaterial({color:0x183947,emissive:0x57e8ef,emissiveIntensity:1.7,metalness:.35,roughness:.12,transmission:.18,transparent:true,opacity:.55,clearcoat:1,clearcoatRoughness:.08});
+  const brainCore=sphere(brain,.082,brainCoreMaterial,[0,0,0],[1.15,.78,1]);brain.userData.core=brainCore;
+  for(let i=0;i<28;i++){const t=i*2.399,position=new THREE.Vector3(Math.cos(t)*(.13+(i%3)*.025),Math.sin(i*.73)*.105,Math.sin(t)*(.10+(i%2)*.025));nodes.push(position);sphere(brain,.009+(i%4===0?.005:0),brainNodeMaterial,position.toArray());}
   const edges=[];for(let i=0;i<nodes.length;i++)for(let j=i+1;j<nodes.length;j++)if(nodes[i].distanceTo(nodes[j])<.19)edges.push(...nodes[i].toArray(),...nodes[j].toArray());
-  const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.Float32BufferAttribute(edges,3));brain.add(new THREE.LineSegments(geometry,new THREE.LineBasicMaterial({color:0x6cb6c7,transparent:true,opacity:.65})));
+  const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.Float32BufferAttribute(edges,3));brain.add(new THREE.LineSegments(geometry,new THREE.LineBasicMaterial({color:0x76e3ea,transparent:true,opacity:.48,blending:THREE.AdditiveBlending,depthWrite:false})));
+  brain.userData.rings=[];for(let i=0;i<3;i++){const ring=add(brain,new THREE.TorusGeometry(.17+i*.025,.0035,8,72),new THREE.MeshBasicMaterial({color:[0x7ce8ea,0x89bfff,0xc2a5ff][i],transparent:true,opacity:.38,blending:THREE.AdditiveBlending,depthWrite:false}));ring.rotation.set(i*.72,.35+i*.55,i*.48);brain.userData.rings.push(ring);}
   for(const [s,name,title,color] of [[-1,'RightHand','新课标','#234657'],[1,'LeftHand','新教材','#405b55']]){
     const prop=group(robot),bookMat=mat(s<0?0x284d61:0x44665b,.18,.48);
     box(prop,.25,.35,.046,bookMat,[0,0,0],undefined,'books',.008);
@@ -61088,12 +61093,19 @@ async function buildRobot(){
     books.push({object:prop,name,side:s,rest:handQuat.clone().invert(),orient:new THREE.Quaternion().setFromEuler(new THREE.Euler(.04,s*-.12,s*-.045))});
   }
   anchors.books=books[1].object;
-  medal=group(robot);cyl(medal,.115,.115,.024,gold,[0,0,0],[Math.PI/2,0,0],'medal');
-  textPlane(medal,['★'],.142,.142,[0,0,.014],'#b5924d','#f4ddb0','medal');
-  for(const s of [-1,1])box(medal,.019,.26,.008,mat(0x518c9d,.25,.5),[s*.054,.19,-.028],[0,0,s*-.4],'medal',.002);
+  medal=group(robot);const medalGoldMaterial=new THREE.MeshPhysicalMaterial({color:0xd5a83e,metalness:.92,roughness:.16,clearcoat:1,clearcoatRoughness:.1,emissive:0x5f3607,emissiveIntensity:.12});
+  const medalInsetMaterial=new THREE.MeshPhysicalMaterial({color:0x6d4813,metalness:.88,roughness:.25,clearcoat:.8});
+  cyl(medal,.137,.137,.036,medalGoldMaterial,[0,0,0],[Math.PI/2,0,0],'medal');
+  cyl(medal,.112,.112,.041,medalInsetMaterial,[0,0,.002],[Math.PI/2,0,0],'medal');
+  const medalRim=add(medal,new THREE.TorusGeometry(.122,.009,12,64),medalGoldMaterial,[0,0,.023],undefined,'medal');medalRim.rotation.z=.02;
+  const starShape=new THREE.Shape();for(let i=0;i<10;i++){const angle=Math.PI/2+i*Math.PI/5,r=i%2?.026:.058,x=Math.cos(angle)*r,y=Math.sin(angle)*r;if(i===0)starShape.moveTo(x,y);else starShape.lineTo(x,y);}starShape.closePath();const starGeometry=new THREE.ExtrudeGeometry(starShape,{depth:.011,bevelEnabled:true,bevelSegments:2,bevelSize:.003,bevelThickness:.003});starGeometry.translate(0,0,-.004);add(medal,starGeometry,medalGoldMaterial,[0,0,.026],undefined,'medal');
+  for(const s of [-1,1]){box(medal,.055,.29,.012,mat(s<0?0x315d72:0x477b74,.45,.34),[s*.052,.205,-.038],[0,0,s*-.24],'medal',.005);sphere(medal,.018,medalGoldMaterial,[s*.068,.075,.006],[1,.6,1],'medal');}
   medal.visible=false;anchors.medal=medal;
-  seed=group(robot);sphere(seed,.027,glow,[0,0,0],[.7,1.3,.65],'seed');
-  sphere(seed,.05,new THREE.MeshBasicMaterial({color:0x88e9d1,transparent:true,opacity:.1}),[0,0,0]);anchors.seed=seed;
+  seed=group(robot);const obsidianSeedMaterial=new THREE.MeshPhysicalMaterial({color:0x010205,emissive:0x0d2934,emissiveIntensity:.14,metalness:.82,roughness:.09,clearcoat:1,clearcoatRoughness:.045,iridescence:.85,iridescenceIOR:1.72,iridescenceThicknessRange:[180,520]});
+  const obsidianCrystal=add(seed,new THREE.OctahedronGeometry(.061,2),obsidianSeedMaterial,[0,0,0],undefined,'seed');obsidianCrystal.scale.set(.72,1.34,.68);obsidianCrystal.rotation.z=.18;
+  const seedAuraMaterial=new THREE.MeshBasicMaterial({color:0x76eaff,transparent:true,opacity:.12,blending:THREE.AdditiveBlending,depthWrite:false});
+  sphere(seed,.098,seedAuraMaterial,[0,0,0],[.82,1.05,.82]);seed.userData.crystal=obsidianCrystal;seed.userData.aura=seedAuraMaterial;seed.userData.sparkles=[];
+  const sparkleMaterial=new THREE.MeshBasicMaterial({color:0xd8ffff,transparent:true,opacity:.9,blending:THREE.AdditiveBlending,depthWrite:false});for(let i=0;i<5;i++){const sparkle=sphere(seed,.006,sparkleMaterial,[Math.cos(i*2.1)*.08,(i-2)*.035,Math.sin(i*2.1)*.05]);seed.userData.sparkles.push(sparkle);}anchors.seed=seed;
   updateAttachments(null,0);
 }
 function boneLocal(name){return robot.worldToLocal(bones[name].getWorldPosition(new THREE.Vector3()));}
@@ -61117,16 +61129,16 @@ function playLibraryMotion(name,automatic=false){
   libraryAction.clampWhenFinished=true;
   $('#motion-select').value=autoPlayback?'auto':name;
 }
-function playChapterMotion(id){
-  const name=chapterMotions[id];
+function playLoopingMotion(name){
   if(!mixer||!libraryActions.has(name))return;
   for(const action of libraryActions.values())if(action!==idleAction)action.stop();
   libraryAction=libraryActions.get(name);motionReturn=0;walkBlend=0;
-  idleAction.stopFading().fadeOut(.3);
-  libraryAction.reset().setLoop(THREE.LoopRepeat,Infinity).setEffectiveWeight(1).setEffectiveTimeScale(1).fadeIn(.3).play();
+  if(libraryAction===idleAction)idleAction.stopFading().reset().setLoop(THREE.LoopRepeat,Infinity).setEffectiveWeight(1).setEffectiveTimeScale(1).play();
+  else{idleAction.stopFading().fadeOut(.3);libraryAction.reset().setLoop(THREE.LoopRepeat,Infinity).setEffectiveWeight(1).setEffectiveTimeScale(1).fadeIn(.3).play();}
   libraryAction.clampWhenFinished=false;
   $('#motion-select').value=name;
 }
+function playChapterMotion(id){playLoopingMotion(chapterMotions[id]);}
 function updatePose(dt,now,selected){
   const blend=1-Math.exp(-dt*5);walkBlend=THREE.MathUtils.lerp(walkBlend,state.playing?1:0,blend);
   const motionDt=$('#modal').open?0:dt;
@@ -61152,6 +61164,12 @@ function updatePose(dt,now,selected){
     const delta=Math.min(boneLocal('LeftFoot').y-footRest.LeftFoot.y,boneLocal('RightFoot').y-footRest.RightFoot.y);
     robot.position.y=-delta;
   }else robot.position.y=0;
+  if(selected==='limbs'&&libraryAction){
+    robot.updateMatrixWorld(true);
+    const restGround=Math.min(footRest.LeftFoot.y,footRest.RightFoot.y);
+    const poseGround=Math.min(...['LeftFoot','RightFoot','LeftLeg','RightLeg'].map(n=>boneLocal(n).y));
+    robot.position.y=restGround-poseGround;
+  }
   robot.updateMatrixWorld(true);
   updateAttachments(selected,now);
   for(const [name,m] of Object.entries(modelMaterials)){
@@ -61171,7 +61189,12 @@ function updateAttachments(selected,now){
   anchors.limbs.position.copy(boneLocal('RightLeg')).add(new THREE.Vector3(0,-.07,.11));
   core.position.copy(cp).add(new THREE.Vector3(0,.055,.08));core.visible=selected==='core';
   brain.position.copy(hp).add(new THREE.Vector3(0,.24,.015));brain.visible=selected==='ideas';brain.rotation.y=reduced?0:now*.16;
-  seed.position.copy(cp).add(new THREE.Vector3(-.15,-.14,.22));
+  brain.userData.rings?.forEach((ring,i)=>{ring.rotation.x=i*.72+(reduced?0:now*(.18+i*.035));ring.rotation.y=.35+i*.55+(reduced?0:now*(i%2?-.25:.22));});
+  if(brain.userData.core)brain.userData.core.material.emissiveIntensity=1.45+(reduced?0:Math.sin(now*3.2)*.55);
+  seed.position.copy(cp).add(new THREE.Vector3(-.15,-.14,.22));seed.visible=selected==='seed';seed.rotation.y=reduced?.25:now*.42;
+  if(seed.userData.crystal)seed.userData.crystal.material.emissiveIntensity=.09+(reduced?0:(Math.sin(now*3.4)+1)*.11);
+  if(seed.userData.aura)seed.userData.aura.opacity=.045+(reduced?0:(Math.sin(now*2.7)+1)*.026);
+  seed.userData.sparkles?.forEach((sparkle,i)=>{sparkle.visible=selected==='seed';sparkle.position.y=((now*.055+i*.038)%.22)-.11;sparkle.material.opacity=.45+(reduced?0:(Math.sin(now*4+i)+1)*.25);});
   for(const prop of books){
     prop.object.visible=selected==='books';
     const palm=boneLocal(prop.name+'Middle2');
@@ -61187,7 +61210,7 @@ themeWorld.floor=floor;
 for(const s of [-1,1]){const road=box(scene,.76,.011,45,mat(s<0?0x153040:0x173a36,.38,.48),[s*.41,-.003,10]);themeWorld.roads.push(road.material);for(const side of [-1,1]){const edge=box(scene,.012,.005,45,new THREE.MeshBasicMaterial({color:s<0?0x527c93:0x567f73}),[s*.41+side*.384,.004,10]);themeWorld.edges.push(edge.material);}for(let i=-5;i<30;i++){const o=box(scene,.20,.008,.033,new THREE.MeshBasicMaterial({color:s<0?0x79b6d0:0x7bc4b2}),[s*.41,.01,i*.5]);routeSegments.push(o);themeWorld.dashes.push(o.material);}}
 for(const [x,label,color] of [[-.41,'人工智能＋教育','#283f50'],[.41,'“做中学”领航计划','#2a4941']]){const roadLabel=textPlane(scene,[label],1.8,.43,[x,.015,1.15],color,'#d3e4e5','paths');roadLabel.rotation.set(-Math.PI/2,0,Math.PI/2);themeWorld.labels.push({object:roadLabel,label,dark:color});}
 const grid=new THREE.GridHelper(80,80,0x1d3443,0x142631);grid.position.y=-.008;grid.material.transparent=true;grid.material.opacity=.18;scene.add(grid);
-anchors.paths=group(robot,[-.33,.06,.48]);terminal=group(scene,[1.25,0,9]);cyl(terminal,.024,.029,1.53,metal,[0,.76,0]);box(terminal,1.65,.54,.085,black,[0,1.75,0],undefined,'medal',.025);textPlane(terminal,['贤外办学质量2.6','QUALITY · TOGETHER'],1.58,.49,[0,1.75,.05],'#162c33','#c7e5df','medal');cyl(terminal,.45,.52,.12,metal,[0,.06,0]);terminal.visible=false;sprout=group(terminal,[-.7,0,.23]);cyl(sprout,.015,.02,.37,glow,[0,.185,0]);for(const s of [-1,1]){const leaf=sphere(sprout,.075,mat(0x7bbbad,.1,.5),[s*.058,.26,0],[1.15,.4,.54]);leaf.rotation.z=s*.5;}sprout.scale.setScalar(.001);
+anchors.paths=group(robot,[-.33,.06,.48]);terminal=group(scene,[1.25,0,9]);const terminalGold=new THREE.MeshPhysicalMaterial({color:0xc8a75a,metalness:.88,roughness:.2,clearcoat:1});const terminalGlass=new THREE.MeshPhysicalMaterial({color:0x08141b,emissive:0x173d47,emissiveIntensity:.3,metalness:.42,roughness:.14,transmission:.12,transparent:true,opacity:.94,clearcoat:1});cyl(terminal,.024,.029,1.53,terminalGold,[0,.76,0]);box(terminal,1.72,.61,.092,terminalGlass,[0,1.75,0],undefined,'medal',.035);for(const [w,h,x,y]of[[1.6,.018,0,2.035],[1.6,.018,0,1.465],[.018,.57,-.79,1.75],[.018,.57,.79,1.75]])box(terminal,w,h,.018,terminalGold,[x,y,.062],undefined,'medal',.006);textPlane(terminal,['贤外办学质量2.6','向新而行 · 向质而生'],1.52,.47,[0,1.75,.07],'#0b1b22','#ead9aa','medal');cyl(terminal,.45,.52,.12,terminalGold,[0,.06,0]);terminal.visible=false;sprout=group(terminal,[-.7,0,.23]);cyl(sprout,.015,.02,.37,glow,[0,.185,0]);for(const s of [-1,1]){const leaf=sphere(sprout,.075,mat(0x7bbbad,.1,.5),[s*.058,.26,0],[1.15,.4,.54]);leaf.rotation.z=s*.5;}sprout.scale.setScalar(.001);
 const ambient=new THREE.HemisphereLight(0xc0d6e4,0x182631,1.4);scene.add(ambient);const key=new THREE.DirectionalLight(0xe3f1fa,3.0);key.position.set(4,7,5);scene.add(key);const rim=new THREE.DirectionalLight(0x80b8ce,3.0);rim.position.set(-3,4,-3);scene.add(rim);const fill=new THREE.DirectionalLight(0xd8d4c5,1.1);fill.position.set(-4,3,6);scene.add(fill);lamp=new THREE.PointLight(0x81ebdd,1.5,4);lamp.position.set(0,2,.5);robot.add(lamp);
 themeWorld.ambient=ambient;themeWorld.key=key;themeWorld.rim=rim;themeWorld.fill=fill;themeWorld.grid=grid;
 // A procedural studio environment gives silver shells broad, quiet reflections.
@@ -61216,44 +61239,49 @@ function setTheme(value,persist=true){
   renderer.toneMappingExposure=light?1.1:1.05;
 }
 $('#theme-toggle').onclick=()=>setTheme(theme==='light'?'dark':'light');setTheme(theme,false);
-function select(index){if(index<0||index>=CHAPTERS.length)return;previousFocus=document.activeElement;stopLibraryMotion();state.selected=index;setPlaying(false);state.rotate=false;$('#rotate').setAttribute('aria-pressed','false');document.body.classList.add('detail');$('#hero').hidden=true;$('#panel').hidden=false;const c=CHAPTERS[index];$('#panel-stage').textContent=`${String(index+1).padStart(2,'0')} / ${c.stage}`;$('#panel-word').textContent=c.word;$('#panel-part').textContent=c.part;$('#panel-title').textContent=c.title;$('#chapter-count').textContent=`${index+1} / ${CHAPTERS.length}`;$('#panel-items').replaceChildren();c.items.forEach(([title,body],i)=>{let el=document.createElement('div');el.className='item';let n=document.createElement('span');n.className='item-num';n.textContent='0'+(i+1);let wrap=document.createElement('div'),h=document.createElement('h4'),p=document.createElement('p');h.textContent=title;p.textContent=body;wrap.append(h,p);el.append(n,wrap);$('#panel-items').append(el);});$$('#chapters button').forEach((b,i)=>{b.classList.toggle('active',i===index);b.setAttribute('aria-pressed',String(i===index));});$('#previous').disabled=index===0;$('#next').disabled=index===7;renderMedia();targetYaw={face:.05,core:.27,paths:.5,books:.4,limbs:.32,ideas:.28,medal:.08,seed:.25}[c.id];targetPitch=c.id==='paths'?.6:c.id==='ideas'?.32:.10;targetDistance={face:1.75,core:1.9,paths:3.3,books:1.85,limbs:2.55,ideas:1.75,medal:1.7,seed:1.75}[c.id];if(innerWidth<=650)targetDistance*=1.5;playChapterMotion(c.id);$('#close').focus({preventScroll:true});resize();updateStatus();}
+function select(index){if(index<0||index>=CHAPTERS.length)return;previousFocus=document.activeElement;stopLibraryMotion();state.selected=index;setPlaying(false);state.rotate=false;$('#rotate').setAttribute('aria-pressed','false');document.body.classList.add('detail');$('#hero').hidden=true;$('#panel').hidden=false;const c=CHAPTERS[index];$('#panel-stage').textContent=`${String(index+1).padStart(2,'0')} / ${c.stage}`;$('#panel-word').textContent=c.word;$('#panel-part').textContent=c.part;$('#panel-title').textContent=c.title;$('#chapter-count').textContent=`${index+1} / ${CHAPTERS.length}`;$('#panel-items').replaceChildren();c.items.forEach(([title,body],i)=>{let el=document.createElement('div');el.className='item';let n=document.createElement('span');n.className='item-num';n.textContent='0'+(i+1);let wrap=document.createElement('div'),h=document.createElement('h4'),p=document.createElement('p');h.textContent=title;p.textContent=body;wrap.append(h,p);el.append(n,wrap);$('#panel-items').append(el);});$$('#chapters button').forEach((b,i)=>{b.classList.toggle('active',i===index);b.setAttribute('aria-pressed',String(i===index));});$('#previous').disabled=index===0;$('#next').disabled=index===7;renderMedia();targetYaw={face:.05,core:.27,paths:.5,books:.4,limbs:.32,ideas:.28,medal:.08,seed:.25}[c.id];targetPitch=c.id==='paths'?.6:c.id==='ideas'?.32:.10;targetDistance={face:1.75,core:1.9,paths:3.3,books:1.85,limbs:4.3,ideas:1.75,medal:1.7,seed:1.75}[c.id];if(innerWidth<=650)targetDistance*=1.5;playChapterMotion(c.id);$('#close').focus({preventScroll:true});resize();updateStatus();}
 function closePanel(){if(state.selected<0)return;state.selected=-1;stopLibraryMotion();document.body.classList.remove('detail');$('#panel').hidden=true;$('#hero').hidden=false;$$('#chapters button').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-pressed','false');});resetView();resize();updateStatus();if(previousFocus&&previousFocus.isConnected)previousFocus.focus({preventScroll:true});}
 CHAPTERS.forEach((c,i)=>{const btn=document.createElement('button');btn.innerHTML=`<strong>${c.word}</strong>`;btn.setAttribute('aria-label',`${i+1} ${c.word} ${c.part}`);btn.setAttribute('aria-pressed','false');btn.addEventListener('click',()=>select(i));$('#chapters').append(btn);});
 let modalPages=[],modalPage=0,modalKind=null;
-function renderMedia(){if(state.selected<0)return;const n=media[CHAPTERS[state.selected].id].length;$('#media-count').textContent=n?`· ${n}`:'';}
+function renderMedia(){if(state.selected<0)return;const n=media[CHAPTERS[state.selected].id].length;$('#media-count').textContent=n?String(n):'';}
 function clearModalMedia(){$$('#modal video').forEach(v=>{v.pause();v.removeAttribute('src');v.load();});}
-function openModal(title){clearModalMedia();$('#modal-title').textContent=title;$('#modal-body').replaceChildren();$('#modal-pages').hidden=true;$('#modal-upload').hidden=true;modalPages=[];modalPage=0;modalKind=null;if(!$('#modal').open)$('#modal').showModal();setPlaying(false);}
-function closeModal(){clearModalMedia();$('#modal').close();modalPages=[];modalKind=null;}
+function openModal(title){clearModalMedia();$('#modal').classList.remove('media-mode');$('#modal-title').textContent=title;$('#modal-body').replaceChildren();$('#modal-pages').hidden=true;$('#modal-upload').hidden=true;$('#modal-delete').hidden=true;$('#modal-close').hidden=false;modalPages=[];modalPage=0;modalKind=null;if(!$('#modal').open)$('#modal').showModal();setPlaying(false);}
+function closeModal(){clearModalMedia();$('#modal').classList.remove('media-mode');$('#modal').close();modalPages=[];modalKind=null;}
 function renderModalPage(){
   clearModalMedia();const page=modalPages[modalPage];if(!page)return;
   $('#modal-title').textContent=page.title;$('#modal-body').replaceChildren();page.render($('#modal-body'));
   $('#modal-pages').hidden=modalPages.length<2;
   $('#modal-page-count').textContent=`${modalPage+1} / ${modalPages.length}`;
   $('#modal-previous').disabled=modalPage===0;$('#modal-next').disabled=modalPage===modalPages.length-1;
+  $('#modal-delete').disabled=modalKind!=='media'||!modalPages.length;
 }
 function showModalPages(pages,kind='info',initial=0){
   if(!pages.length)return;openModal(pages[0].title);modalPages=pages;modalKind=kind;
-  modalPage=Math.max(0,Math.min(initial,pages.length-1));$('#modal-upload').hidden=kind!=='media';renderModalPage();
+  modalPage=Math.max(0,Math.min(initial,pages.length-1));renderModalPage();
 }
 function turnModalPage(delta){const next=modalPage+delta;if(next<0||next>=modalPages.length)return;modalPage=next;renderModalPage();}
 function textPage(title,html){return {title,render(body){body.innerHTML=html;}};}
 function openChapterMedia(initial){
-  if(state.selected<0)return;const c=CHAPTERS[state.selected],list=media[c.id];
-  const pages=[{title:'',render(body){
-    for(const text of [c.summary,c.evidence]){const p=document.createElement('p');p.textContent=text;body.append(p);}
-    for(const [title,url]of c.sources??[]){const p=document.createElement('p'),a=document.createElement('a');a.href=url;a.textContent=title+' ↗';a.target='_blank';a.rel='noopener noreferrer';p.append(a);body.append(p);}
-  }}];
-  list.forEach(entry=>pages.push({title:entry.name,render(body){
+  if(state.selected<0)return;const list=media[CHAPTERS[state.selected].id];
+  openModal('');$('#modal').classList.add('media-mode');$('#modal-upload').hidden=false;$('#modal-delete').hidden=false;$('#modal-close').hidden=true;modalKind='media';
+  modalPages=list.map(entry=>({title:'',render(body){
     const el=document.createElement(entry.type.startsWith('video/')?'video':'img');el.src=entry.url;
     if(el.tagName==='VIDEO'){el.controls=true;el.playsInline=true;el.preload='metadata';el.addEventListener('error',()=>showToast('当前浏览器无法播放此视频，请使用 H.264 编码的 MP4。'));}else el.alt=entry.name;
     body.append(el);
   }}));
-  showModalPages(pages,'media',initial??(list.length?1:0));
+  $('#modal-delete').disabled=!modalPages.length;if(!modalPages.length)return;
+  modalPage=Math.max(0,Math.min(initial??0,modalPages.length-1));renderModalPage();
+}
+function deleteCurrentMedia(){
+  if(modalKind!=='media'||state.selected<0)return;const list=media[CHAPTERS[state.selected].id];if(!list.length)return;
+  const [removed]=list.splice(modalPage,1);if(removed?.url.startsWith('blob:')){URL.revokeObjectURL(removed.url);activeMediaUrls=activeMediaUrls.filter(url=>url!==removed.url);}
+  renderMedia();openChapterMedia(Math.min(modalPage,list.length-1));
 }
 $('#show-media').onclick=()=>openChapterMedia();
 $('#modal-upload').onclick=()=>$('#upload').click();
+$('#modal-delete').onclick=deleteCurrentMedia;
 $('#modal-previous').onclick=()=>turnModalPage(-1);$('#modal-next').onclick=()=>turnModalPage(1);
-$('#upload').addEventListener('change',e=>{if(state.selected<0)return;const id=CHAPTERS[state.selected].id,start=media[id].length;for(const file of e.target.files){if(!/^(image|video)\//.test(file.type)){showToast('请选择图片或视频文件。');continue;}const url=URL.createObjectURL(file);activeMediaUrls.push(url);media[id].push({name:file.name,type:file.type,url,file});}renderMedia();e.target.value='';if(modalKind==='media')openChapterMedia(start+1);});
+$('#upload').addEventListener('change',e=>{if(state.selected<0)return;const id=CHAPTERS[state.selected].id,start=media[id].length;for(const file of e.target.files){if(!/^(image|video)\//.test(file.type)){showToast('请选择图片或视频文件。');continue;}const url=URL.createObjectURL(file);activeMediaUrls.push(url);media[id].push({name:file.name,type:file.type,url,file});}renderMedia();e.target.value='';if(modalKind==='media')openChapterMedia(start);});
 $('#motion-select').addEventListener('change',e=>playLibraryMotion(e.target.value));
 $('#close').onclick=closePanel;$('#previous').onclick=()=>select(state.selected-1);$('#next').onclick=()=>select(state.selected+1);$('.brand').onclick=e=>{e.preventDefault();closePanel();resetView();};$('#begin').onclick=()=>{setPlaying(true);showToast('机器人已启程。点击底部章节按钮可暂停并展开汇报内容。');};$('#play').onclick=()=>{if(state.selected>=0)closePanel();setPlaying(!state.playing);};$('#finish').onclick=()=>{closePanel();state.progress=100;setPlaying(false);updateStatus();showToast('抵达的是共同愿景，奖牌象征师生未来的成长成果。');};$('#progress').oninput=e=>{closePanel();setPlaying(false);state.progress=Number(e.target.value);state.finished=state.progress>=100;updateStatus();};$('#rotate').onclick=()=>{state.rotate=!state.rotate;$('#rotate').setAttribute('aria-pressed',String(state.rotate));};$('#zoom-in').onclick=()=>targetDistance=Math.max(1,targetDistance*.82);$('#zoom-out').onclick=()=>targetDistance=Math.min(11,targetDistance*1.22);$('#reset').onclick=()=>{closePanel();resetView();state.rotate=false;$('#rotate').setAttribute('aria-pressed','false');};$('#fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await $('#app').requestFullscreen();}catch{showToast('当前环境不支持全屏，可用浏览器全屏功能。');}};
 if($('#help'))$('#help').onclick=()=>showModalPages([
@@ -61271,7 +61299,7 @@ $('#about').onclick=()=>showModalPages([
 $('#modal-close').onclick=closeModal;$('#modal').addEventListener('cancel',e=>{e.preventDefault();closeModal();});$('#modal').addEventListener('click',e=>{if(e.target===$('#modal')){const r=e.target.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)closeModal();}});
 $('#begin').onclick=()=>setPlaying(true);
 // Save user-selected media together with the document. No upload, network, or API key.
-$('#export').onclick=async()=>{const count=Object.values(media).flat().length;if(!count){showToast('请先在章节中添加图片或视频，再打包素材。');return;}const total=Object.values(media).flat().reduce((n,e)=>n+(e.file?.size??e.url.length),0);if(total>120*1024*1024){showToast('素材超过 120 MB，请压缩视频后重新添加。');return;}const button=$('#export');button.disabled=true;button.textContent='正在打包…';try{const data={};for(const [id,list] of Object.entries(media)){data[id]=await Promise.all(list.map(async e=>({name:e.name,type:e.type,url:e.file?await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=reject;reader.readAsDataURL(e.file);}):e.url})));}const clone=document.documentElement.cloneNode(true);clone.querySelector('#embedded-media')?.remove();const script=document.createElement('script');script.id='embedded-media';script.type='application/json';script.textContent=JSON.stringify(data).replace(/</g,'\\u003c');clone.querySelector('head').append(script);clone.querySelector('#markers').replaceChildren();clone.querySelector('#chapters').replaceChildren();clone.querySelector('#panel').hidden=true;clone.querySelector('#hero').hidden=false;clone.querySelector('body').classList.remove('detail');clone.querySelector('#modal').removeAttribute('open');clone.querySelector('#modal-body').replaceChildren();clone.querySelector('#modal-pages').hidden=true;clone.querySelector('#modal-upload').hidden=true;clone.querySelector('#export').disabled=false;clone.querySelector('#export').textContent='打包素材';clone.querySelector('#loading')?.remove();const blob=new Blob(['<!doctype html>\n'+clone.outerHTML],{type:'text/html;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='xianwai-chappie-with-media.html';a.click();setTimeout(()=>URL.revokeObjectURL(url),60000);showToast('含素材的独立 HTML 已生成，可离线打开。');}catch(e){showToast('打包失败：'+e.message);}finally{button.disabled=false;button.textContent='打包素材';}};
+$('#export').onclick=async()=>{const count=Object.values(media).flat().length;if(!count){showToast('请先在章节中添加图片或视频，再打包素材。');return;}const total=Object.values(media).flat().reduce((n,e)=>n+(e.file?.size??e.url.length),0);if(total>120*1024*1024){showToast('素材超过 120 MB，请压缩视频后重新添加。');return;}const button=$('#export');button.disabled=true;button.textContent='正在打包…';try{const data={};for(const [id,list] of Object.entries(media)){data[id]=await Promise.all(list.map(async e=>({name:e.name,type:e.type,url:e.file?await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=reject;reader.readAsDataURL(e.file);}):e.url})));}const clone=document.documentElement.cloneNode(true);clone.querySelector('#embedded-media')?.remove();const script=document.createElement('script');script.id='embedded-media';script.type='application/json';script.textContent=JSON.stringify(data).replace(/</g,'\\u003c');clone.querySelector('head').append(script);clone.querySelector('#markers').replaceChildren();clone.querySelector('#chapters').replaceChildren();clone.querySelector('#panel').hidden=true;clone.querySelector('#hero').hidden=false;clone.querySelector('body').classList.remove('detail');clone.querySelector('#modal').removeAttribute('open');clone.querySelector('#modal').classList.remove('media-mode');clone.querySelector('#modal-body').replaceChildren();clone.querySelector('#modal-pages').hidden=true;clone.querySelector('#modal-upload').hidden=true;clone.querySelector('#modal-delete').hidden=true;clone.querySelector('#export').disabled=false;clone.querySelector('#export').textContent='打包素材';clone.querySelector('#loading')?.remove();const blob=new Blob(['<!doctype html>\n'+clone.outerHTML],{type:'text/html;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='xianwai-chappie-with-media.html';a.click();setTimeout(()=>URL.revokeObjectURL(url),60000);showToast('含素材的独立 HTML 已生成，可离线打开。');}catch(e){showToast('打包失败：'+e.message);}finally{button.disabled=false;button.textContent='打包素材';}};
 if($('#embedded-media')){try{const saved=JSON.parse($('#embedded-media').textContent);for(const c of CHAPTERS){media[c.id]=(saved[c.id]??[]).filter(e=>typeof e.url==='string'&&e.url.startsWith('data:')&&/^(image|video)\//.test(e.type));}}catch{showToast('内嵌素材未能读取。');}}
 window.addEventListener('keydown',e=>{if(/INPUT|TEXTAREA|SELECT/.test(e.target.tagName))return;if($('#modal').open){if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();turnModalPage(e.key==='ArrowLeft'?-1:1);}return;}if(e.code==='Space'){e.preventDefault();$('#play').click();}else if(e.key==='Escape')closePanel();else if(/^[1-8]$/.test(e.key))select(Number(e.key)-1);else if(e.key==='ArrowLeft'){e.preventDefault();targetYaw-=.2;}else if(e.key==='ArrowRight'){e.preventDefault();targetYaw+=.2;}else if(e.key==='+'||e.key==='=')$('#zoom-in').click();else if(e.key==='-')$('#zoom-out').click();});
 let pointers=new Map(),downPos=null,moved=false,lastPinch=0;
@@ -61281,12 +61309,12 @@ function visibleInTree(o){for(let p=o;p;p=p.parent)if(!p.visible)return false;re
 canvas.addEventListener('pointerup',e=>{pointers.delete(e.pointerId);if(!pointers.size)downPos=null;});canvas.addEventListener('pointercancel',e=>{pointers.delete(e.pointerId);moved=true;});
 function animate(ms){requestAnimationFrame(animate);if(!ready||document.hidden)return;const now=ms*.001,dt=Math.min(.05,now-(animate.last??now));animate.last=now;const smooth=1-Math.exp(-dt*5),selected=state.selected>=0?CHAPTERS[state.selected].id:null;
 if(state.playing&&state.selected<0&&!$('#modal').open){state.progress=Math.min(100,state.progress+dt*100/90);state.phase+=dt*1.7;if(state.progress>=100){setPlaying(false);showToast('抵达共同愿景：贤外办学质量2.6。点击奖牌，展开成果目标。');}}robot.position.z=state.progress*.06;updatePose(dt,now,selected);
-const end=state.progress>=99.9;terminal.visible=end;terminal.position.z=robot.position.z-.3;medal.visible=end||selected==='medal';if(end){animate.reward=Math.min(1,(animate.reward??0)+dt/3.5);const t=animate.reward,t1=t*t*(3-2*t);const cp=anchors.core.position;medal.position.set(1.25*(1-t1)+cp.x*t1,.6+(cp.y-.6)*t1+Math.sin(t*Math.PI)*.35,.28*t1);medal.rotation.y=(1-t1)*Math.PI*2;const growth=Math.max(.001,(t-.65)/.35);sprout.scale.setScalar(growth);}else{animate.reward=0;medal.position.copy(anchors.core.position).add(new THREE.Vector3(0,0,.11));medal.rotation.y=0;sprout.scale.setScalar(.001);}seed.scale.setScalar(1+(reduced?0:Math.sin(now*1.4)*.06));
+const end=state.progress>=99.9;terminal.visible=end;terminal.position.z=robot.position.z-.3;medal.visible=end||selected==='medal';if(end){animate.reward=Math.min(1,(animate.reward??0)+dt/3.5);const t=animate.reward,t1=t*t*(3-2*t);const cp=anchors.core.position;medal.position.set(1.25*(1-t1)+cp.x*t1,.6+(cp.y-.6)*t1+Math.sin(t*Math.PI)*.35,.28*t1);medal.rotation.y=(1-t1)*Math.PI*2;const growth=Math.max(.001,(t-.65)/.35);sprout.scale.setScalar(growth);}else{animate.reward=0;medal.position.copy(anchors.core.position).add(new THREE.Vector3(0,0,.11));medal.rotation.y=0;sprout.scale.setScalar(.001);}seed.scale.setScalar(1+(reduced?0:Math.sin(now*1.9)*.055));
 robot.updateMatrixWorld(true);if(selected)focusTarget.copy(worldAnchor(selected));else focusTarget.set(0,innerWidth<=650?1.30:1.32,robot.position.z);if(selected==='ideas')focusTarget.y+=.09;if(selected==='paths'){focusTarget.x=0;focusTarget.y=.20;}if(selected==='limbs')focusTarget.y=.75;if(!selected&&end)focusTarget.set(.18,1.4,robot.position.z);camTarget.lerp(focusTarget,reduced?1:smooth);if(state.rotate)targetYaw+=dt*.17;yaw=THREE.MathUtils.lerp(yaw,targetYaw,reduced?1:smooth);pitch=THREE.MathUtils.lerp(pitch,targetPitch,reduced?1:smooth);distance=THREE.MathUtils.lerp(distance,targetDistance,reduced?1:smooth);camera.position.set(camTarget.x+distance*Math.sin(yaw)*Math.cos(pitch),camTarget.y+distance*Math.sin(pitch),camTarget.z+distance*Math.cos(yaw)*Math.cos(pitch));camera.lookAt(camTarget);renderer.render(scene,camera);
 const w=container.clientWidth,h=container.clientHeight,used=[];for(const marker of $$('.hotspot')){const id=marker.dataset.id;if((id==='medal'&&!end)||state.selected>=0){marker.style.display='none';continue;}let pos=worldAnchor(id);const v=pos.clone().project(camera);const x=(v.x*.5+.5)*w,y=(-v.y*.5+.5)*h;const hidden=v.z>1||v.z<-1||x<40||x>w-50||y<(innerWidth>650?90:h*.38)||y>h-130;marker.style.display=hidden?'none':'flex';if(hidden)continue;let offsetX={face:55,core:66,paths:-42,books:50,limbs:-54,ideas:-34,seed:-65,medal:55}[id];let offsetY={face:0,core:-7,paths:0,books:0,limbs:0,ideas:-23,seed:20,medal:0}[id];const mw=marker.offsetWidth,mh=marker.offsetHeight,mx=Math.max(mw/2+8,Math.min(w-mw/2-8,x+offsetX)),my=Math.max(mh/2+8,Math.min(h-mh/2-8,y+offsetY));marker.style.left=mx+'px';marker.style.top=my+'px';const overlap=used.some(p=>Math.abs(p[0]-mx)<(p[2]+mw)/2+4&&Math.abs(p[1]-my)<(p[3]+mh)/2+4);marker.style.opacity=overlap?'0':'1';marker.style.pointerEvents=overlap?'none':'auto';if(!overlap)used.push([mx,my,mw,mh]);}updateStatus();}
 async function initialize(){try{
 scene=new THREE.Scene();scene.fog=new THREE.FogExp2(0x080f16,.045);renderer=new THREE.WebGLRenderer({canvas,alpha:true,antialias:true,powerPreference:'high-performance'});renderer.setClearColor(0,0);renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.05;renderer.outputColorSpace=THREE.SRGBColorSpace;camera=new THREE.PerspectiveCamera(36,1,.05,200);
-await buildRobot();buildWorld();setTheme(theme,false);ready=true;resize();resetView();window.addEventListener('resize',()=>{resize();if(state.selected<0)resetView();});setPlaying(false);requestAnimationFrame(animate);
+await buildRobot();buildWorld();setTheme(theme,false);ready=true;resize();resetView();window.addEventListener('resize',()=>{resize();if(state.selected<0)resetView();});setPlaying(false);playLoopingMotion('Arm Stretching');requestAnimationFrame(animate);
 }catch(e){$('#unavailable').hidden=false;$('#markers').hidden=true;$('#unavailable h2').textContent='机器人未能加载';$('#unavailable p').textContent='请用新版 Chrome 或 Edge 打开，确认启用硬件加速。章节内容仍可阅读。';console.error('Chappie load failed',e);}finally{if($('#loading')){const load=$('#loading');load.style.opacity=0;setTimeout(()=>load.remove(),800);}}}
 initialize();
 canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();ready=false;$('#unavailable').hidden=false;showToast('3D 画面已中断，请刷新页面重新加载；章节仍可阅读。');});

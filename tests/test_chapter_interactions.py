@@ -25,21 +25,27 @@ class ChapterInteractionTests(unittest.TestCase):
     def test_each_chapter_uses_the_approved_repeating_motion(self):
         expected_mapping = (
             "const chapterMotions={face:'Waving',core:'Talking (2)',"
-            "paths:'Pointing Forward',books:'Using A Fax Machine',"
-            "limbs:'Arm Stretching',ideas:'Talking (1)',"
-            "medal:'Standing Clap',seed:'Kneeling Pointing'};"
+            "paths:'Pointing Forward',books:'Idle',"
+            "limbs:'Kneeling Pointing',ideas:'Talking (1)',"
+            "medal:'Salute',seed:'Using A Fax Machine'};"
         )
         self.assertIn(expected_mapping, self.html)
-        detail_motion = re.search(
-            r"function playChapterMotion\(id\).*?\n}", self.html, re.DOTALL
+        looping_motion = re.search(
+            r"function playLoopingMotion\(name\).*?\n}", self.html, re.DOTALL
         )
-        self.assertIsNotNone(detail_motion)
-        self.assertIn("setLoop(THREE.LoopRepeat,Infinity)", detail_motion.group(0))
+        self.assertIsNotNone(looping_motion)
+        self.assertIn("setLoop(THREE.LoopRepeat,Infinity)", looping_motion.group(0))
         select_function = re.search(
             r"function select\(index\).*?\nfunction closePanel", self.html, re.DOTALL
         )
         self.assertIsNotNone(select_function)
         self.assertIn("playChapterMotion(c.id)", select_function.group(0))
+        self.assertIn("playLoopingMotion('Arm Stretching')", self.html)
+        self.assertIn(
+            "const poseGround=Math.min(...['LeftFoot','RightFoot','LeftLeg','RightLeg'].map(n=>boneLocal(n).y));",
+            self.html,
+        )
+        self.assertIn("robot.position.y=restGround-poseGround;", self.html)
 
     def test_detail_card_omits_only_the_english_subtitle(self):
         self.assertNotIn('id="panel-en"', self.html)
@@ -47,12 +53,22 @@ class ChapterInteractionTests(unittest.TestCase):
         self.assertIn("AI 智慧脑", self.html)
         self.assertIn("核心 CPU", self.html)
 
-    def test_media_overview_has_no_title_or_add_your_own_note(self):
-        self.assertNotIn("c.word+' · 资料与作品'", self.html)
+    def test_media_gallery_is_icon_only_and_has_direct_add_delete_controls(self):
+        self.assertIn('class="album-icon"', self.html)
+        self.assertIn('aria-label="打开作品相册"', self.html)
+        self.assertIn('id="modal-upload" hidden aria-label="添加图片或视频">＋</button>', self.html)
+        self.assertIn('id="modal-delete" hidden aria-label="删除当前图片或视频">−</button>', self.html)
+        self.assertIn("function deleteCurrentMedia()", self.html)
+        self.assertIn("list.splice(modalPage,1)", self.html)
+        self.assertNotIn("for(const text of [c.summary,c.evidence])", self.html)
         self.assertNotIn("添加自己的图片或视频", self.html)
-        self.assertRegex(self.html, r"const pages=\[\{title:'',render\(body\)")
-        self.assertIn('id="modal-upload"', self.html)
-        self.assertIn("for(const text of [c.summary,c.evidence])", self.html)
+
+    def test_requested_visuals_use_the_new_material_language(self):
+        self.assertIn("background:linear-gradient(125deg,#1526307a,#0b171f4d)", self.html)
+        self.assertIn("const obsidianSeedMaterial=new THREE.MeshPhysicalMaterial", self.html)
+        self.assertIn("brain.userData.visualStyle='neural-orbit'", self.html)
+        self.assertIn("const medalGoldMaterial=new THREE.MeshPhysicalMaterial", self.html)
+        self.assertNotIn("QUALITY · TOGETHER", self.html)
 
     def test_textbook_props_are_visible_only_in_the_books_chapter(self):
         visibility_rule = "prop.object.visible=selected==='books';"
